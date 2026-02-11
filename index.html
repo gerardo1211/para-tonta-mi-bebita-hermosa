@@ -2,38 +2,57 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<h1>Tonta hermosa bella ricura preciosa💖 </h1>
+<title>San Valentín ❤️</title>
+
 <style>
 body{
     text-align:center;
     font-family: Arial, sans-serif;
     background-color:#ffdde1;
+    margin:0;
 }
+
+h2{
+    margin-top:80px;
+    font-size:30px;
+}
+
 h1{
-    margin-top:100px;
     font-size:40px;
 }
+
 button{
     font-size:20px;
-    padding:10px 20px;
+    padding:12px 25px;
     margin:20px;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
+    transition:0.3s;
 }
+
 #yes{
     background-color:#ff4b5c;
     color:white;
 }
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
 #no{
     background-color:gray;
     color:white;
 }
 </style>
+
 </head>
+
 <body>
 
-<h1>¿Quieres ser mi San Valentín? 💖</h1>
+<h2>Tonta hermosa bella ricura preciosa ❤️</h2>
+
+<h1>¿Quieres ser mi San Valentín? 💘</h1>
 
 <button id="yes">Sí 💕</button>
 <button id="no">No 😢</button>
@@ -43,8 +62,8 @@ const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
 
 noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
     noBtn.style.position = "absolute";
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
@@ -52,14 +71,14 @@ noBtn.addEventListener("mouseover", () => {
 
 yesBtn.addEventListener("click", () => {
     document.body.innerHTML = `
-    <h1>💖 CITA CONFIRMADA 💖</h1>
+    <h1 style="margin-top:100px;"> CITA CONFIRMADA 💖</h1>
     <h2>📅 14 de febrero - 4:00 PM</h2>
     <h2>👗 Vestimenta: lo que sea, todo te queda rico bb 😌</h2>
-    <h1>TE AMO MI AMORR 💕</h1>
+    <h1 style="margin-top:40px;">TE AMO MI AMORR </h1>
     `;
 });
-
 </script>
 
 </body>
 </html>
+
